@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using WebApplication1.Models;
 
 namespace LabBigSchool_TranVanKhuong.Models
 {
@@ -10,8 +11,9 @@ namespace LabBigSchool_TranVanKhuong.Models
     {
         ///
         public int Id { get; set; }
+        public ApplicationUser Lecturer { get; set; }
         [Required]
-        public String Lecturered { get; set; }
+        public String LecturerId { get; set; }
         [Required]
         [StringLength(255)]
         public string Place { get; set; }

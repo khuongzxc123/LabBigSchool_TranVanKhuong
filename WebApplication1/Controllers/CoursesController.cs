@@ -31,6 +31,7 @@ namespace WebApplication1.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CourseViewModel viewModel)
         {
             if(!ModelState.IsValid)
@@ -40,7 +41,7 @@ namespace WebApplication1.Controllers
             }
             var course = new Course
             {
-                Lecturered = User.Identity.GetUserId(),
+                LecturerId = User.Identity.GetUserId(),
                 DateTime = viewModel.GetDateTime(),
                 CategoryId = viewModel.Category,
                 Place = viewModel.Place,

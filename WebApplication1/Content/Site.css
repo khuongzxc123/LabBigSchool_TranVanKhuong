@@ -22,3 +22,37 @@ select,
 textarea {
     max-width: 280px;
 }
+.navbar-inverse {
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100% );
+    border-color: #080808;
+}
+.course{
+    list-style:none;
+    padding-top:10px;
+}
+.course > li{
+    position: relative;
+    margin-bottom: 30px;
+}
+    .course > li .date {
+        text-align: center;
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100% );
+        color: black;
+        width: 60px;
+        border-radius: 8px;
+        border: 2px solid #000000;
+        cursor: pointer;
+    }
+
+.course >li .details{
+    position: absolute;
+    top:0;
+    left: 70px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color:white;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+}
